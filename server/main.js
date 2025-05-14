@@ -4,7 +4,7 @@ import cors from 'cors';
 app.use(express.json());
 
 const corsOptions = {
-    origin: 'http://localhost:5173', // URL-ga frontend-kaaga
+    origin: process.env.CLIENT_URL, // URL-ga frontend-kaaga
     methods: ['GET', 'POST', 'PUT', 'DELETE'],
     allowedHeaders: ['Content-Type', 'Authorization'], // Ku darnay headers-ka la oggol yahay
     credentials: true,
